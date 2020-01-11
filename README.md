@@ -1,44 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Movies Challenge</h1>
 
-## Available Scripts
+> This app displays movies in theaters consuming data from Ingresso.com endpoint. 
+> Build using Typescript, React, Styled-Components and Axios.
 
-In the project directory, you can run:
+### Screenshot
 
-### `yarn start`
+<h1 align="center">
+  <img alt="MoviesChallenge" title="PlanetChallenge" src="https://github.com/NathanFRibeiro/movies-challenge/blob/master/public/demo.png?raw=true" />
+</h1>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This project was developed using the following technologies:
 
-### `yarn test`
+- [x] [ReactJS](https://reactjs.org/)
+- [x] [Create React App](https://github.com/facebook/create-react-app)
+- [x] [Axios](https://github.com/axios/axios)
+- [x] [Styled-components](https://www.styled-components.com/)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Install
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+# install all dependencies
+yarn 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# start the app on a new terminal window
+yarn start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For the application to get endpoint data, you need to allow CORS(Access-Control-Allow-Origin). In Chrome, you can use [this extension](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf).
 
-### `yarn eject`
+## Author
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+👤 **Nathan Ribeiro**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Linkedin: [Nathan Ribeiro](https://www.linkedin.com/in/nathanfribeiro/)
+* Github: [@NathanFRibeiro](https://github.com/NathanFRibeiro)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Show your support!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Give a ⭐️ if you like this project!
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+***
+_Made with ❤️ by [Nathan Ribeiro](https://github.com/NathanFRibeiro)_
