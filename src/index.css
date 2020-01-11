@@ -1,13 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: ProximaNova;
+  src: url(https://ingresso-a.akamaihd.net/sitenovo-2017/comum/fonts/ProximaNova-Regular.woff2);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: Klavika;
+  src: url(https://ingresso-a.akamaihd.net/sitenovo-2017/comum/fonts/Klavika-Regular.woff);
+}
+
+@font-face {
+  font-family: Klavika;
+  src: url(https://ingresso-a.akamaihd.net/sitenovo-2017/comum/fonts/Klavika-Bold.woff);
+  font-weight: bold;
+}
+
+body {
+  background: rgb(51, 51, 51);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  margin: 0;
+  font-family: ProximaNova, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

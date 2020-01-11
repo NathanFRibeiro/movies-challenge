@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+
+import Catalog from "./components/Catalog";
+import Header from "./components/Header";
+import "./App.css";
+import api from "./services/api";
+import IMovie, { IResponse } from "./IMovie";
 
 const App: React.FC = () => {
+  const [movies, setMovies] = useState<IMovie[]>([]);
+  const [city, setCity] = useState<string>("São Paulo");
+  const [filter, setFilter] = useState<string>("");
+
+  const getMovies = async () => {
+    const endpoint = city === "São Paulo" ? "1" : "2";
+
+    const response = await api.get(
+      `https://api-content.ingresso.com/v0/templates/highlights/${endpoint}/partnership/home`
+    );
+
+    const movieData = response.data;
+
+    if (filter !== "") {
+      const filteredMovies = movieData.filter((response: IResponse) =>
+        response.event.title.toUpperCase().includes(filter.toUpperCase())
+      );
+
+      setMovies(filteredMovies);
+    } else {
+      setMovies(movieData);
+    }
+  };
+
+  useEffect(() => {
+    getMovies();
+  }, [city, filter]);
+
+  const headerProps = {
+    setCity,
+    setFilter
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header {...headerProps} />
+      <Catalog selectedCity={city} movies={movies} />
     </div>
   );
-}
+};
 
 export default App;
